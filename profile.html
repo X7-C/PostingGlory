@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2/css/pico.min.css"/>
+  <link rel="stylesheet" href="../styles/main.css"/>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><strong>Profile</strong></li></ul>
+      <ul>
+        <li><a href="./feed.html">Feed</a></li>
+        <li><a href="./post.html">New Post</a></li>
+        <li><button id="logoutBtn" class="secondary">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="status" aria-live="polite"></div>
+
+    <section id="profileHead" style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem;">
+      <div id="avatarBox" class="avatar">U</div>
+      <div>
+        <h2 id="pName"></h2>
+        <p id="pMeta"></p>
+        <button id="followBtn" hidden></button>
+      </div>
+    </section>
+
+    <h3>Posts</h3>
+    <div id="userPosts" class="cardsGrid"></div>
+  </main>
+
+<script type="module" src="./src/pages/profiles.js"></script>
+</body>
+</html>

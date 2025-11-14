@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2/css/pico.min.css"/>
+  <link rel="stylesheet" href="../styles/main.css"/>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><strong>Social Feed</strong></li></ul>
+      <ul>
+        <li><a href="./profile.html">My Profile</a></li>
+        <li><a href="./post.html">New Post</a></li>
+        <li><button id="logoutBtn" class="secondary">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="searchForm" role="search">
+      <input id="searchInput" name="q" placeholder="Search posts…"/>
+    </form>
+
+    <div id="status" aria-live="polite"></div>
+
+    <div id="postsGrid" class="cardsGrid"></div>
+
+    <nav class="pager">
+      <button id="prevBtn" class="secondary" disabled>« Prev</button>
+      <span id="pageLabel">Page 1</span>
+      <button id="nextBtn" class="">Next »</button>
+    </nav>
+  </main>
+
+  <script type="module" src="../src/pages/feed.js"></script>
+</body>
+</html>

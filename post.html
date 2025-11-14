@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2/css/pico.min.css"/>
+  <link rel="stylesheet" href="../styles/main.css"/>
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><strong>Post</strong></li></ul>
+      <ul>
+        <li><a href="./feed.html">Feed</a></li>
+        <li><a href="./profile.html">My Profile</a></li>
+        <li><button id="logoutBtn" class="secondary">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="status" aria-live="polite"></div>
+
+    <article id="viewPost" hidden>
+      <header>
+        <h2 id="vTitle"></h2>
+        <small id="vMeta"></small>
+      </header>
+      <p id="vBody"></p>
+      <figure id="vMedia" hidden>
+        <img id="vImg" alt="" />
+        <figcaption id="vAlt"></figcaption>
+      </figure>
+      <footer id="ownerActions" hidden style="margin-top:1rem;">
+        <button id="editBtn">Edit</button>
+        <button id="deleteBtn" class="contrast">Delete</button>
+      </footer>
+    </article>
+
+    <form id="postForm" hidden>
+      <h3 id="formHeading">New Post</h3>
+      <label>
+        Title
+        <input name="title" id="fTitle" required/>
+      </label>
+      <label>
+        Body
+        <textarea name="body" id="fBody" rows="6"></textarea>
+      </label>
+      <details>
+        <summary>Media (optional)</summary>
+        <label>
+          Image URL
+          <input name="mediaUrl" id="fMediaUrl" type="url" placeholder="https://..."/>
+        </label>
+        <label>
+          Alt text
+          <input name="mediaAlt" id="fMediaAlt"/>
+        </label>
+      </details>
+      <div style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+        <button type="submit" id="saveBtn">Save</button>
+        <a class="secondary" href="./feed.html" role="button">Cancel</a>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="../src/pages/post.js"></script>
+</body>
+</html>
