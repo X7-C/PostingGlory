@@ -1,4 +1,4 @@
-# Posting Glory — Social Media Client
+# Posting Glory Test Client
 
 A minimal vanilla JavaScript social media client built for the Noroff API (v2).
 This project was built with **functionality first**, using no frameworks.
