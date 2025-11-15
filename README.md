@@ -52,3 +52,8 @@ Some parts of the API handling were reused and adapted from my earlier projects 
 - **localStorage**
 
 No React, no bundlers, no frameworks.
+
+
+## Website hosting:
+
+- postinggloryx7c.netlify.app
